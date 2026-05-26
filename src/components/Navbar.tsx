@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { navGroups, navItems } from "@/lib/site-data";
+import { navItems } from "@/lib/site-data";
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-3" aria-label="Aspen Pharmaceuticals home">
+    <Link
+      href="/"
+      className="flex items-center gap-3"
+      aria-label="Aspen Pharmaceuticals home">
       <span className="grid size-10 place-items-center rounded-sm bg-[#0B3C6D] text-sm font-semibold tracking-[0.18em] text-white">
         AP
       </span>
@@ -24,11 +27,10 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/92 backdrop-blur-md">
       <nav
         className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
-        aria-label="Primary navigation"
-      >
+        aria-label="Primary navigation">
         <Logo />
         <div className="hidden items-center gap-5 lg:flex xl:gap-7">
-          {navGroups.map((group) => (
+          {/* {navGroups.map((group) => (
             <div key={group.label} className="group relative py-7">
               <Link
                 href={group.href}
@@ -48,32 +50,29 @@ export function Navbar() {
                 ))}
               </div>
             </div>
-          ))}
+          ))} */}
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-[13px] font-medium text-slate-600 transition-colors hover:text-[#0B3C6D] xl:text-sm"
-            >
+              className="text-[13px] font-medium text-slate-600 transition-colors hover:text-[#0B3C6D] xl:text-sm">
               {item.label}
             </Link>
           ))}
         </div>
         <Link
           href="/enquiry"
-          className="hidden rounded-sm border border-[#0B3C6D] px-5 py-3 text-sm font-semibold text-[#0B3C6D] transition-colors hover:bg-[#0B3C6D] hover:text-white sm:inline-flex"
-        >
+          className="hidden rounded-sm border border-[#0B3C6D] px-5 py-3 text-sm font-semibold text-[#0B3C6D] transition-colors hover:bg-[#0B3C6D] hover:text-white sm:inline-flex">
           Enquiry
         </Link>
       </nav>
       <div className="border-t border-slate-200/70 px-5 py-3 lg:hidden">
         <div className="flex gap-5 overflow-x-auto text-sm">
-          {[...navGroups, ...navItems].map((item) => (
+          {[...navItems].map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="shrink-0 font-medium text-slate-600"
-            >
+              className="shrink-0 font-medium text-slate-600">
               {item.label}
             </Link>
           ))}

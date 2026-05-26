@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ProductTable } from "@/components/ProductTable";
 import { productDivisions } from "@/lib/site-data";
+import HomeBanner from "@/components/HomeBanner";
 
 export function getProductDivision(slug: string) {
   return productDivisions.find((item) => item.slug === slug);
@@ -19,19 +20,11 @@ export function ProductDivisionView({ slug }: { slug: string }) {
     <>
       <Navbar />
       <main className="bg-white">
-        <section className="bg-[#F5F7FA]">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0F8B8D]">
-              Product Division
-            </p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-medium leading-[1.08] tracking-tight text-[#0B3C6D] sm:text-5xl lg:text-6xl">
-              {division.title}
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-              {division.description}
-            </p>
-          </div>
-        </section>
+        <HomeBanner
+          eyebrow="Product Division"
+          title={division.title}
+          description={division.description}
+        />
 
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">

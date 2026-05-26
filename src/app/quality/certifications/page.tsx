@@ -34,11 +34,15 @@ export default function CertificationsPage() {
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {certificationItems.map((item) => (
-                <article key={item} className="rounded-sm border border-slate-200 bg-white p-8">
+                <article
+                  key={item.title}
+                  className="rounded-sm border border-slate-200 bg-white p-8">
                   <div className="mb-10 grid size-14 place-items-center rounded-sm bg-[#EAF4F4] text-sm font-semibold text-[#0F8B8D]">
                     QA
                   </div>
-                  <h2 className="text-3xl font-medium text-[#0B3C6D]">{item}</h2>
+                  <h2 className="text-3xl font-medium text-[#0B3C6D]">
+                    {item.title}
+                  </h2>
                   <p className="mt-5 text-sm leading-7 text-slate-600">
                     A recognized quality standard supporting disciplined,
                     documented, and compliance-oriented pharmaceutical

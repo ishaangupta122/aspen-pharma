@@ -1,5 +1,7 @@
 export const navItems = [
-  { label: "Home", href: "/" },
+  // { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Manufacturing", href: "/manufacturing" },
   { label: "Products", href: "/products" },
   { label: "Quality", href: "/quality" },
   { label: "Research", href: "/research-innovation" },
@@ -7,31 +9,31 @@ export const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const navGroups = [
-  {
-    label: "About Us",
-    href: "/about",
-    items: [
-      { label: "Company Overview", href: "/about" },
-      { label: "Founder Message", href: "/about#founder-message" },
-      { label: "Vision & Mission", href: "/about#vision-mission" },
-    ],
-  },
-  {
-    label: "Manufacturing",
-    href: "/manufacturing",
-    items: [
-      { label: "Akums", href: "/manufacturing/akums-drugs-pharmaceuticals" },
-      { label: "Enrico", href: "/manufacturing/enrico-pharmaceuticals" },
-      { label: "Purobien", href: "/manufacturing/purobien-lifesciences" },
-      { label: "Medicef", href: "/manufacturing/medicef-pharma" },
-      { label: "Gentech", href: "/manufacturing/gentech-healthcare" },
-      { label: "Elvia", href: "/manufacturing/elvia-care" },
-      { label: "Lifevision", href: "/manufacturing/lifevision-healthcare" },
-      { label: "Ekantika", href: "/manufacturing/ekantika" },
-    ],
-  },
-];
+// export const navGroups = [
+//   {
+//     label: "About Us",
+//     href: "/about",
+//     items: [
+//       { label: "Company Overview", href: "/about" },
+//       { label: "Founder Message", href: "/about#founder-message" },
+//       { label: "Vision & Mission", href: "/about#vision-mission" },
+//     ],
+//   },
+//   {
+//     label: "Manufacturing",
+//     href: "/manufacturing",
+//     items: [
+//       { label: "Akums", href: "/manufacturing/akums-drugs-pharmaceuticals" },
+//       { label: "Enrico", href: "/manufacturing/enrico-pharmaceuticals" },
+//       { label: "Purobien", href: "/manufacturing/purobien-lifesciences" },
+//       { label: "Medicef", href: "/manufacturing/medicef-pharma" },
+//       { label: "Gentech", href: "/manufacturing/gentech-healthcare" },
+//       { label: "Elvia", href: "/manufacturing/elvia-care" },
+//       { label: "Lifevision", href: "/manufacturing/lifevision-healthcare" },
+//       { label: "Ekantika", href: "/manufacturing/ekantika" },
+//     ],
+//   },
+// ];
 
 export const bannerMessages = [
   "Delivering Trusted Pharmaceutical Excellence Since 2010",
@@ -97,12 +99,42 @@ export const qualityControlItems = [
   "SOP systems",
 ];
 
-export const certificationItems = ["WHO-GMP", "ISO", "GLP", "GMP"];
+export const certificationItems = [
+  {
+    title: "WHO-GMP",
+    iconName: "who",
+    logo: "/who-gmp.webp",
+
+    description:
+      "World Health Organization - Good Manufacturing Practice standard ensuring robust production quality controls.",
+  },
+  {
+    title: "ISO Certification",
+    iconName: "iso",
+    logo: "/iso.avif",
+    description:
+      "International Organization for Standardization framework compliance for organizational and operational consistency.",
+  },
+  {
+    title: "GLP Compliance",
+    iconName: "glp",
+    logo: "/glp.jpg",
+    description:
+      "Good Laboratory Practice standards covering the safety, validity, and absolute integrity of testing facilities.",
+  },
+  {
+    title: "GMP Systems",
+    iconName: "gmp",
+    logo: "/gmp.avif",
+    description:
+      "Governing Good Manufacturing Practice regulations across partner execution lines from raw materials to final release.",
+  },
+];
 
 export const companyAddress = [
   "Aspen Pharmaceuticals Pvt. Ltd.",
-  "33/20, Loni Road, Site-2",
-  "Sahibabad Industrial Area",
+  "Site-2, Loni Rd, Block A,",
+  "Industrial Area, Sahibabad",
   "Ghaziabad, Uttar Pradesh - 201007",
 ];
 
@@ -111,25 +143,29 @@ export const productDivisions = [
     title: "Neurology",
     slug: "neurology",
     description:
-      "Neurology-focused portfolio categories developed for specialist-led care and long-term patient support.",
+      "Advanced central nervous system therapies developed for specialist-led intervention and progressive neurological care.",
     rows: [
       {
-        category: "Neuro vitamins & support",
-        molecules: "Methylcobalamin, pregabalin support combinations",
-        brand: "Neuro care range",
-        positioning: "Nerve health, neuropathic support, and continuity of care",
+        category: "Neuro-Vitamins & Co-Factors",
+        molecules:
+          "Methylcobalamin, Pregabalin & Alpha Lipoic Acid combinations",
+        brand: "Neuroline Forte",
+        positioning:
+          "Peripheral nerve regeneration, neuroprotection, and neuropathic continuity of care.",
       },
       {
-        category: "Pain & neuropathy",
-        molecules: "Pregabalin, gabapentin category combinations",
-        brand: "Specialist prescription range",
-        positioning: "Targeted support for neuropathic pain management",
+        category: "Neuropathic Pain Management",
+        molecules: "Pregabalin, Gabapentin & Nortriptyline formulations",
+        brand: "Axonerve Range",
+        positioning:
+          "Targeted modulation of hyper-excited neurons for chronic pain relief.",
       },
       {
-        category: "Adjunctive care",
-        molecules: "Nutritional and supportive formulations",
-        brand: "Supportive therapy range",
-        positioning: "Designed to complement physician-led treatment plans",
+        category: "Cognitive & Neuro-Supportive Care",
+        molecules: "Citicoline, Piracetam & nutritional nerve adjuncts",
+        brand: "Cerebrox",
+        positioning:
+          "Designed to complement primary critical care and improve daily functional outcomes.",
       },
     ],
   },
@@ -137,25 +173,30 @@ export const productDivisions = [
     title: "Psychiatry",
     slug: "psychiatry",
     description:
-      "Psychiatry categories positioned for ethical, specialist-driven mental healthcare.",
+      "Ethical, evidence-based mental healthcare categories engineered to support long-term psychiatric treatment and patient compliance.",
     rows: [
       {
-        category: "Anxiety & mood support",
-        molecules: "SSRI/SNRI category products",
-        brand: "Mind care range",
-        positioning: "Ethical support for psychiatrist-led treatment",
+        category: "Anxiolytics & Mood Regulators",
+        molecules:
+          "Selective Serotonin Reuptake Inhibitor (SSRI) configurations",
+        brand: "Serenex",
+        positioning:
+          "Stabilizing therapeutic pathways under strict, psychiatrist-led protocols.",
       },
       {
-        category: "Sleep & calming support",
-        molecules: "Prescription-led calming and sleep support categories",
-        brand: "Clinical psychiatry range",
-        positioning: "Focused on adherence, safety, and monitored outcomes",
+        category: "Sedative-Hypnotics & Calming Agents",
+        molecules: "Prescription-guided neuro-calming compounds",
+        brand: "Somnorest",
+        positioning:
+          "Focused on sleep architecture restoration, safety profiles, and monitored outcomes.",
       },
       {
-        category: "Adjunct nutrition",
-        molecules: "Vitamin and neurological support combinations",
-        brand: "Wellness adjunct range",
-        positioning: "Supportive care for long-term patient wellness",
+        category: "Neuro-Psychiatric Adjuncts",
+        molecules:
+          "Optimized Melatonin & highly bioavailable vitamin D3/B-complex formulas",
+        brand: "PsychoVit",
+        positioning:
+          "Therapeutic supportive care aiming to enhance long-term emotional and cognitive wellness.",
       },
     ],
   },
@@ -163,25 +204,30 @@ export const productDivisions = [
     title: "Orthopaedics",
     slug: "orthopaedics",
     description:
-      "Orthopaedic categories for pain, mobility, inflammation support, and musculoskeletal wellness.",
+      "Comprehensive mobility solutions targeting acute pain mitigation, deep joint tissue inflammation, and structural bone density.",
     rows: [
       {
-        category: "Pain management",
-        molecules: "NSAID and analgesic category combinations",
-        brand: "Ortho relief range",
-        positioning: "Mobility-focused pain and inflammation support",
+        category: "Advanced Analgesics & NSAIDs",
+        molecules:
+          "Aceclofenac, Paracetamol & Serratiopeptidase enzyme combinations",
+        brand: "Orthoflam-SP",
+        positioning:
+          "Rapid-onset management of musculoskeletal inflammation and trauma recovery.",
       },
       {
-        category: "Bone & joint wellness",
-        molecules: "Calcium, vitamin D3, joint support combinations",
-        brand: "Bone care range",
-        positioning: "Support for bone strength and long-term joint health",
+        category: "Bone Mineralization & Joint Structure",
+        molecules: "Calcium Carbonate, Vitamin D3, Glucosamine & Chondroitin",
+        brand: "Ossio-D3 / Cartiflex",
+        positioning:
+          "Sustaining structural bone matrix density and delaying cartilage degeneration.",
       },
       {
-        category: "Post-care support",
-        molecules: "Nutritional and recovery support products",
-        brand: "Recovery support range",
-        positioning: "Designed for physician-guided rehabilitation support",
+        category: "Post-Surgical & Tissue Recovery",
+        molecules:
+          "Collagen Peptides, Rosehip Extract & potent antioxidant formulas",
+        brand: "Tendofix",
+        positioning:
+          "Physician-guided therapeutic support optimized for soft tissue and tendon repair.",
       },
     ],
   },
@@ -189,25 +235,29 @@ export const productDivisions = [
     title: "Cardiac & Diabetic",
     slug: "cardiac-diabetic",
     description:
-      "Chronic-care categories serving cardiovascular and diabetic care conversations.",
+      "Chronic-care cardiovascular formulations and high-precision anti-diabetic molecules serving lifelong metabolic stability.",
     rows: [
       {
-        category: "Diabetic care support",
-        molecules: "Anti-diabetic category products and adjunct support",
-        brand: "Glycemic care range",
-        positioning: "Support for disciplined metabolic care pathways",
+        category: "Oral Hypoglycemic Agents (OHAs)",
+        molecules: "Metformin, Glimepiride & Teneligliptin specialized blends",
+        brand: "Glycedoc-M",
+        positioning:
+          "Ensuring stable, non-fluctuating glycemic control and reducing HbA1c pathways.",
       },
       {
-        category: "Cardiac support",
-        molecules: "Cardiovascular prescription categories",
-        brand: "Cardio care range",
-        positioning: "Focused on long-term adherence and partner confidence",
+        category: "Cardiovascular Management",
+        molecules: "Atorvastatin, Rosuvastatin & Amlodipine configurations",
+        brand: "Cardiostat",
+        positioning:
+          "Long-term lipid lowering and blood pressure control to mitigate vascular risks.",
       },
       {
-        category: "Lifestyle adjuncts",
-        molecules: "Vitamins, minerals, and supportive care products",
-        brand: "Chronic care support",
-        positioning: "Patient support around physician-led chronic care",
+        category: "Metabolic & Lifestyle Adjuncts",
+        molecules:
+          "Coenzyme Q10, Omega-3 Fatty Acids & critical trace element minerals",
+        brand: "Vascovit",
+        positioning:
+          "Preventative patient support mitigating side effects of long-term statin and OHA therapy.",
       },
     ],
   },
@@ -215,25 +265,30 @@ export const productDivisions = [
     title: "General Medicine",
     slug: "general-medicine",
     description:
-      "Essential healthcare categories for broad clinical use and day-to-day physician needs.",
+      "High-utility essential therapeutics addressing multi-specialty clinical requirements and day-to-day patient recovery.",
     rows: [
       {
-        category: "Antibiotic support",
-        molecules: "Common prescription-led anti-infective categories",
-        brand: "General prescription range",
-        positioning: "Reliable access for routine clinical requirements",
+        category: "Broad-Spectrum Anti-Infectives",
+        molecules: "Amoxicillin & Potassium Clavulanate, Cefixime formulations",
+        brand: "Aspen-Clav / Clavi-Cef",
+        positioning:
+          "High-efficacy bacterial eradication for respiratory, urinary, and soft tissue infections.",
       },
       {
-        category: "Gastro & wellness",
-        molecules: "Gastrointestinal and nutritional support products",
-        brand: "Everyday care range",
-        positioning: "Broad utility across general practice settings",
+        category: "Gastrointestinal & Mucosal Protection",
+        molecules:
+          "Pantoprazole, Rabeprazole & Domperidone sustained-release options",
+        brand: "Pantadoc-D",
+        positioning:
+          "Rapid acid suppression, proton-pump inhibition, and anti-reflux management.",
       },
       {
-        category: "Fever, pain & support",
-        molecules: "Analgesic, antipyretic, and supportive categories",
-        brand: "Primary care range",
-        positioning: "Practical formulations for everyday patient needs",
+        category: "Antipyretics & Acute Pain Management",
+        molecules:
+          "Paracetamol, Tramadol combinations & absolute baseline analgesics",
+        brand: "Molpar Range",
+        positioning:
+          "Dependable, scalable primary care solutions for systemic pain and fever reduction.",
       },
     ],
   },
@@ -273,7 +328,11 @@ export const manufacturingPartnerDetails = [
     slug: "enrico-pharmaceuticals",
     intro:
       "A manufacturing partner focused on quality formulations, regulatory compliance, and modern infrastructure.",
-    focus: ["Quality formulations", "Regulatory compliance", "Modern infrastructure"],
+    focus: [
+      "Quality formulations",
+      "Regulatory compliance",
+      "Modern infrastructure",
+    ],
     logoNote: "Use uploaded official logo.",
   },
   {
@@ -295,7 +354,11 @@ export const manufacturingPartnerDetails = [
     slug: "medicef-pharma",
     intro:
       "A certified production partner supporting high-quality packaging and reliable supply chain operations.",
-    focus: ["Certified production", "High-quality packaging", "Reliable supply chain"],
+    focus: [
+      "Certified production",
+      "High-quality packaging",
+      "Reliable supply chain",
+    ],
     logoNote: null,
   },
   {
