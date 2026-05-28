@@ -1,131 +1,26 @@
-import { CardGrid } from "@/components/CardGrid";
 import CertificationsSection from "@/components/CertificationsSection";
+import { CompanyOverview } from "@/components/CompanyOverview";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import ManufacturingSection from "@/components/MaufacturingSection";
 import { Navbar } from "@/components/Navbar";
 import ProductsSection from "@/components/ProductSections";
 import QualityCommitmentSection from "@/components/QualitySections";
-import { SectionHeader } from "@/components/SectionHeader";
-import {
-  certificationItems,
-  manufacturingPartnerDetails,
-  manufacturingPartners,
-  productDivisions,
-  qualityPillars,
-  therapeuticSegments,
-} from "@/lib/site-data";
 import Link from "next/link";
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0F8B8D]">
-      {children}
-    </p>
-  );
-}
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
+        <HeroCarousel />
 
-        {/* <section id="about" className="bg-[#F5F7FA]">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-24">
-            <SectionHeader
-              eyebrow="About Aspen"
-              title="Independent, ethical, and built for long-term trust."
-            />
-            <div className="space-y-6 text-lg leading-9 text-slate-700">
-              <p>
-                Aspen Pharmaceuticals Pvt. Ltd. is an independent Indian
-                pharmaceutical company established in 2010, focused on
-                delivering quality healthcare solutions across India through
-                innovation, ethical business practices, and reliable
-                pharmaceutical manufacturing partnerships.
-              </p>
-              <p className="border-l-2 border-[#0F8B8D] pl-5 text-base leading-8 text-slate-600">
-                Aspen Pharmaceuticals Pvt. Ltd. is not affiliated with any
-                foreign pharmaceutical company with a similar name.
-              </p>
-            </div>
-          </div>
-        </section> */}
+        <CompanyOverview />
 
         <ProductsSection />
 
-        {/* <section id="divisions" className="bg-white">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
-            <SectionHeader
-              eyebrow="Therapeutic Focus"
-              title="Speciality Divisions"
-              description="A focused portfolio serving doctors, distributors, and healthcare partners across essential therapeutic areas."
-              align="center"
-            />
-            <div className="mt-12">
-              <CardGrid items={therapeuticSegments} />
-            </div>
-          </div>
-        </section> */}
-
-        {/* <section id="manufacturing" className="bg-[#F5F7FA]">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:py-24">
-            <SectionHeader
-              eyebrow="Manufacturing"
-              title="Manufacturing Facilities"
-              description="Aspen Pharmaceuticals collaborates with leading pharmaceutical manufacturing partners across India operating with WHO-GMP certified infrastructure and quality-controlled production systems."
-            />
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {manufacturingPartners.map((partner) => (
-                <Link
-                  key={partner}
-                  href="/manufacturing"
-                  className="grid min-h-24 place-items-center rounded-sm border border-slate-200 bg-white px-4 text-center text-sm font-semibold text-[#0B3C6D] transition-colors hover:border-[#0F8B8D]/60">
-                  {partner}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        <ManufacturingSection />
-
-        <QualityCommitmentSection />
-
-        {/* <section id="quality" className="bg-white">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
-            <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-              <SectionHeader
-                eyebrow="Quality Commitment"
-                title="Disciplined systems for dependable products."
-                description="Every product relationship is shaped by careful partner selection, compliance-oriented systems, and consistent oversight from production through market readiness."
-              />
-              <div className="grid gap-4 sm:grid-cols-2">
-                {qualityPillars.map((pillar, index) => (
-                  <article
-                    key={pillar}
-                    className="rounded-sm border border-slate-200 p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F8B8D]">
-                      0{index + 1}
-                    </p>
-                    <h3 className="mt-5 text-xl font-medium text-[#0B3C6D]">
-                      {pillar}
-                    </h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">
-                      Structured checks, documentation, and review practices
-                      help ensure consistency, traceability, and reliability.
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        <CertificationsSection />
+        {/* <CertificationsSection /> */}
 
         <section id="pan" className="bg-white">
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-12 sm:px-8 lg:grid-cols-3 lg:px-10 lg:py-20">
@@ -146,7 +41,7 @@ export default function Home() {
             </article>
 
             {/* Leadership Message Card */}
-            <article className="rounded-sm border border-slate-200 p-7 flex flex-col justify-between bg-slate-50/30">
+            <article className="rounded-sm border border-slate-200 p-7 flex flex-col justify-between bg-[#F5F7FA] shadow-sm">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F8B8D]">
                   Leadership Message
@@ -162,7 +57,7 @@ export default function Home() {
               </div>
 
               {/* Founder Identity & Call to Action */}
-              <div className="mt-6 pt-5 border-t border-slate-100">
+              <div className="mt-6 pt-5 border-t border-[#0B3C6D]/20">
                 <h4 className="text-sm font-bold text-[#0B3C6D]">Anup Goyal</h4>
                 <p className="text-xs text-slate-500">
                   Leadership, Aspen Pharmaceuticals
@@ -177,6 +72,10 @@ export default function Home() {
             </article>
           </div>
         </section>
+
+        <ManufacturingSection />
+
+        <QualityCommitmentSection />
 
         {/* <section id="enquiry" className="bg-[#F5F7FA]">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-24">
@@ -269,8 +168,6 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-
-        {/* <CtaSection /> */}
       </main>
       <Footer />
       <FloatingWhatsApp />

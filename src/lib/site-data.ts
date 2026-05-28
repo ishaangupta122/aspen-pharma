@@ -4,36 +4,11 @@ export const navItems = [
   { label: "Manufacturing", href: "/manufacturing" },
   { label: "Products", href: "/products" },
   { label: "Quality", href: "/quality" },
-  { label: "Research", href: "/research-innovation" },
+  { label: "Research & Innovation", href: "/research-innovation" },
+  { label: "CSR", href: "/csr-ethics" },
+  { label: "Media", href: "/media" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
 ];
-
-// export const navGroups = [
-//   {
-//     label: "About Us",
-//     href: "/about",
-//     items: [
-//       { label: "Company Overview", href: "/about" },
-//       { label: "Founder Message", href: "/about#founder-message" },
-//       { label: "Vision & Mission", href: "/about#vision-mission" },
-//     ],
-//   },
-//   {
-//     label: "Manufacturing",
-//     href: "/manufacturing",
-//     items: [
-//       { label: "Akums", href: "/manufacturing/akums-drugs-pharmaceuticals" },
-//       { label: "Enrico", href: "/manufacturing/enrico-pharmaceuticals" },
-//       { label: "Purobien", href: "/manufacturing/purobien-lifesciences" },
-//       { label: "Medicef", href: "/manufacturing/medicef-pharma" },
-//       { label: "Gentech", href: "/manufacturing/gentech-healthcare" },
-//       { label: "Elvia", href: "/manufacturing/elvia-care" },
-//       { label: "Lifevision", href: "/manufacturing/lifevision-healthcare" },
-//       { label: "Ekantika", href: "/manufacturing/ekantika" },
-//     ],
-//   },
-// ];
 
 export const bannerMessages = [
   "Delivering Trusted Pharmaceutical Excellence Since 2010",
@@ -146,26 +121,22 @@ export const productDivisions = [
       "Advanced central nervous system therapies developed for specialist-led intervention and progressive neurological care.",
     rows: [
       {
-        category: "Neuro-Vitamins & Co-Factors",
-        molecules:
-          "Methylcobalamin, Pregabalin & Alpha Lipoic Acid combinations",
-        brand: "Neuroline Forte",
-        positioning:
-          "Peripheral nerve regeneration, neuroprotection, and neuropathic continuity of care.",
+        brand: "AKINO-SHOT",
+        drugStrength: "Cholecalciferol 60,000 IU",
+        packing: "1*5 ML",
+        dosageForm: "Shot",
       },
       {
-        category: "Neuropathic Pain Management",
-        molecules: "Pregabalin, Gabapentin & Nortriptyline formulations",
-        brand: "Axonerve Range",
-        positioning:
-          "Targeted modulation of hyper-excited neurons for chronic pain relief.",
+        brand: "ASPACETAM 800",
+        drugStrength: "Piracetam 800 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Cognitive & Neuro-Supportive Care",
-        molecules: "Citicoline, Piracetam & nutritional nerve adjuncts",
-        brand: "Cerebrox",
-        positioning:
-          "Designed to complement primary critical care and improve daily functional outcomes.",
+        brand: "ASPANERV CD3",
+        drugStrength: "Methylcobalamin 1500 mcg + Calcium 500 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
     ],
   },
@@ -176,27 +147,22 @@ export const productDivisions = [
       "Ethical, evidence-based mental healthcare categories engineered to support long-term psychiatric treatment and patient compliance.",
     rows: [
       {
-        category: "Anxiolytics & Mood Regulators",
-        molecules:
-          "Selective Serotonin Reuptake Inhibitor (SSRI) configurations",
-        brand: "Serenex",
-        positioning:
-          "Stabilizing therapeutic pathways under strict, psychiatrist-led protocols.",
+        brand: "ASPAMOR-20",
+        drugStrength: "Duloxetine 20 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Sedative-Hypnotics & Calming Agents",
-        molecules: "Prescription-guided neuro-calming compounds",
-        brand: "Somnorest",
-        positioning:
-          "Focused on sleep architecture restoration, safety profiles, and monitored outcomes.",
+        brand: "ASPAMOR-30",
+        drugStrength: "Duloxetine 30 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Neuro-Psychiatric Adjuncts",
-        molecules:
-          "Optimized Melatonin & highly bioavailable vitamin D3/B-complex formulas",
-        brand: "PsychoVit",
-        positioning:
-          "Therapeutic supportive care aiming to enhance long-term emotional and cognitive wellness.",
+        brand: "BETAPOL-ET",
+        drugStrength: "Propranolol 20 mg + Etizolam 0.5 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
     ],
   },
@@ -207,27 +173,28 @@ export const productDivisions = [
       "Comprehensive mobility solutions targeting acute pain mitigation, deep joint tissue inflammation, and structural bone density.",
     rows: [
       {
-        category: "Advanced Analgesics & NSAIDs",
-        molecules:
-          "Aceclofenac, Paracetamol & Serratiopeptidase enzyme combinations",
-        brand: "Orthoflam-SP",
-        positioning:
-          "Rapid-onset management of musculoskeletal inflammation and trauma recovery.",
+        brand: "ASPACOX-MR",
+        drugStrength: "Etoricoxib 60 mg + Thiocolchicoside 4 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Bone Mineralization & Joint Structure",
-        molecules: "Calcium Carbonate, Vitamin D3, Glucosamine & Chondroitin",
-        brand: "Ossio-D3 / Cartiflex",
-        positioning:
-          "Sustaining structural bone matrix density and delaying cartilage degeneration.",
+        brand: "ASPACOX-60",
+        drugStrength: "Etoricoxib 60 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Post-Surgical & Tissue Recovery",
-        molecules:
-          "Collagen Peptides, Rosehip Extract & potent antioxidant formulas",
-        brand: "Tendofix",
-        positioning:
-          "Physician-guided therapeutic support optimized for soft tissue and tendon repair.",
+        brand: "ASPACOX-90",
+        drugStrength: "Etoricoxib 90 mg",
+        packing: "1*15",
+        dosageForm: "Tablet",
+      },
+      {
+        brand: "ASPENGEL",
+        drugStrength: "Diclofenac 1.16% + Menthol 5%",
+        packing: "1*30 GM",
+        dosageForm: "Gel",
       },
     ],
   },
@@ -238,26 +205,22 @@ export const productDivisions = [
       "Chronic-care cardiovascular formulations and high-precision anti-diabetic molecules serving lifelong metabolic stability.",
     rows: [
       {
-        category: "Oral Hypoglycemic Agents (OHAs)",
-        molecules: "Metformin, Glimepiride & Teneligliptin specialized blends",
-        brand: "Glycedoc-M",
-        positioning:
-          "Ensuring stable, non-fluctuating glycemic control and reducing HbA1c pathways.",
+        brand: "ASPAQ10",
+        drugStrength: "Ubidecarenone 100 mg + L-Carnitine 500 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Cardiovascular Management",
-        molecules: "Atorvastatin, Rosuvastatin & Amlodipine configurations",
-        brand: "Cardiostat",
-        positioning:
-          "Long-term lipid lowering and blood pressure control to mitigate vascular risks.",
+        brand: "BETAPOL-20",
+        drugStrength: "Propranolol 20 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
       {
-        category: "Metabolic & Lifestyle Adjuncts",
-        molecules:
-          "Coenzyme Q10, Omega-3 Fatty Acids & critical trace element minerals",
-        brand: "Vascovit",
-        positioning:
-          "Preventative patient support mitigating side effects of long-term statin and OHA therapy.",
+        brand: "BETAPOL-Plus",
+        drugStrength: "Propranolol 10 mg + Etizolam 0.25 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
       },
     ],
   },
@@ -268,27 +231,34 @@ export const productDivisions = [
       "High-utility essential therapeutics addressing multi-specialty clinical requirements and day-to-day patient recovery.",
     rows: [
       {
-        category: "Broad-Spectrum Anti-Infectives",
-        molecules: "Amoxicillin & Potassium Clavulanate, Cefixime formulations",
-        brand: "Aspen-Clav / Clavi-Cef",
-        positioning:
-          "High-efficacy bacterial eradication for respiratory, urinary, and soft tissue infections.",
+        brand: "ASTHIM Syrup",
+        drugStrength: "Vitamin B1+B2+B6+B12",
+        packing: "1*200 ML",
+        dosageForm: "Syrup",
       },
       {
-        category: "Gastrointestinal & Mucosal Protection",
-        molecules:
-          "Pantoprazole, Rabeprazole & Domperidone sustained-release options",
-        brand: "Pantadoc-D",
-        positioning:
-          "Rapid acid suppression, proton-pump inhibition, and anti-reflux management.",
+        brand: "ASTHIM Injection",
+        drugStrength: "Thiamine 100 mg",
+        packing: "1*2 ML",
+        dosageForm: "Injection",
       },
       {
-        category: "Antipyretics & Acute Pain Management",
-        molecules:
-          "Paracetamol, Tramadol combinations & absolute baseline analgesics",
-        brand: "Molpar Range",
-        positioning:
-          "Dependable, scalable primary care solutions for systemic pain and fever reduction.",
+        brand: "ASTHIM-100",
+        drugStrength: "Thiamine 100 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
+      },
+      {
+        brand: "BEFTHIM Tab",
+        drugStrength: "Benfotiamine 100 mg",
+        packing: "1*10",
+        dosageForm: "Tablet",
+      },
+      {
+        brand: "ASPAIMUNE 4G",
+        drugStrength: "Omega-3 + DHA + Ginseng",
+        packing: "1*10",
+        dosageForm: "Softgel Capsule",
       },
     ],
   },

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { bannerMessages } from "@/lib/site-data";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -18,10 +16,10 @@ const presenceMetrics = [
 
 export function Hero() {
   return (
-    <section id="home" className="overflow-hidden bg-white">
-      <div className="mx-auto grid min-h-[calc(100svh-80px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_0.98fr] lg:px-10 lg:py-20">
+    <section id="home" className="overflow-hidden bg-[#F5F7FA]">
+      <div className="mx-auto grid min-h-[calc(100svh-100px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_0.98fr] lg:px-10 lg:py-20">
         <div>
-          <SectionLabel>Trusted Since 2010</SectionLabel>
+          <SectionLabel>About Us</SectionLabel>
           <h1 className="mt-5 max-w-4xl text-4xl font-medium leading-[1.06] tracking-tight text-[#0B3C6D] sm:text-5xl lg:text-6xl">
             Delivering Trusted Healthcare Across India
           </h1>
@@ -35,7 +33,7 @@ export function Hero() {
             serious global-standard pharmaceutical company while remaining
             proudly independent and Indian.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          {/* <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/enquiry"
               className="inline-flex justify-center rounded-sm bg-[#0B3C6D] px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#082f56]">
@@ -46,7 +44,7 @@ export function Hero() {
               className="inline-flex justify-center rounded-sm border border-slate-300 px-6 py-4 text-sm font-semibold text-[#0B3C6D] transition-colors hover:border-[#0F8B8D] hover:text-[#0F8B8D]">
               View Divisions
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <div className="absolute -right-20 top-10 h-64 w-64 rounded-full border border-[#0F8B8D]/15" />

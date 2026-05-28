@@ -50,7 +50,7 @@ function InfiniteMarquee({
         <Link
           key={`${partner.slug}-${index}`}
           href="/manufacturing"
-          className="flex-shrink-0 w-44 flex flex-col items-center rounded-2xl p-6 text-center transition-all duration-200 hover:-translate-y-0.5">
+          className="shrink-0 w-44 flex flex-col items-center rounded-2xl p-6 text-center transition-all duration-200 hover:-translate-y-0.5">
           <div className="flex size-30 items-center justify-center overflow-hidden">
             {partner.logo ? (
               <Image
@@ -76,30 +76,30 @@ export default function ManufacturingSection() {
   return (
     <section id="manufacturing" className="bg-white overflow-hidden mt-10">
       {/* Header */}
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24 flex flex-col items-center text-center">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20 flex flex-col items-center text-center">
         <div className="max-w-3xl text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#0F8B8D]">
+          {/* <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#0F8B8D]">
             Manufacturing Partners
-          </p>
+          </p> */}
           <h2 className="text-3xl font-medium tracking-tight text-[#0B3C6D] sm:text-4xl">
-            Manufacturing Facilities
+            Manufacturing Partners
           </h2>
-          <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
+          {/* <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
             Pharmaceutical manufacturing partners across India operating with
             WHO-GMP certified infrastructure and quality-controlled production
             systems.
-          </p>
+          </p> */}
         </div>
       </div>
 
       {/* Marquee */}
       <div
-        className="relative mt-5 w-full mb-16 lg:mb-28 overflow-hidden cursor-pointer"
+        className="relative mt-2 w-full mb-16 lg:mb-28 overflow-hidden cursor-pointer"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}>
         {/* Fade masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-white to-transparent" />
 
         <InfiniteMarquee partners={manufacturingPartners} paused={paused} />
       </div>

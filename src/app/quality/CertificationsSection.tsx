@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Award, ShieldCheck, FileCheck, Landmark } from "lucide-react";
-import { SectionHeader } from "./SectionHeader";
 import { certificationItems } from "@/lib/site-data";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const iconMap = {
   who: Landmark,
@@ -30,12 +29,11 @@ export default function CertificationsSection() {
             const hasLogo = Boolean(item.logo);
 
             return (
-              <Link
-                href="/quality/certifications"
+              <div
                 key={item.title}
-                className="group flex flex-col items-center rounded-sm border border-slate-200/80 bg-white p-8 text-center shadow-[0_4px_20px_rgba(15,23,42,0.02)] transition-all duration-300 ease-in-out hover:border-[#0F8B8D]/40 hover:shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
+                className="group flex flex-col items-center rounded-sm border bg-white p-8 text-center shadow-[0_4px_20px_rgba(15,23,42,0.02)] transition-all duration-300 ease-in-out border-[#0B3C6D]/20">
                 {/* Icon / Logo Wrapper */}
-                <div className="mb-6 grid h-14 w-14 place-items-center rounded-sm bg-[#EAF4F4] text-[#0F8B8D] transition-all duration-300 ease-in-out group-hover:bg-[#0F8B8D] group-hover:text-white group-hover:scale-105 overflow-hidden">
+                <div className="mb-6 grid h-14 w-14 place-items-center rounded-sm bg-[#EAF4F4] text-[#0F8B8D] transition-all duration-300 ease-in-out overflow-hidden">
                   {hasLogo ? (
                     <Image
                       src={item.logo}
@@ -50,7 +48,7 @@ export default function CertificationsSection() {
                 </div>
 
                 {/* Certification Title */}
-                <h3 className="text-2xl font-semibold tracking-tight text-[#0B3C6D] transition-colors group-hover:text-[#0F8B8D]">
+                <h3 className="text-2xl font-semibold tracking-tight transition-colors text-[#0B3C6D]">
                   {item.title}
                 </h3>
 
@@ -60,10 +58,10 @@ export default function CertificationsSection() {
                 </p>
 
                 {/* Subtle Verification Link */}
-                <span className="mt-5 inline-flex items-center text-xs font-semibold text-[#0F8B8D] duration-300">
+                {/* <span className="mt-5 inline-flex items-center text-xs font-semibold text-[#0F8B8D] duration-300">
                   Verify Framework &rarr;
-                </span>
-              </Link>
+                </span> */}
+              </div>
             );
           })}
         </div>
