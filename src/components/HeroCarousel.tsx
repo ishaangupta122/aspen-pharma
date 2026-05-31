@@ -32,8 +32,7 @@ const slides: Slide[] = [
       "WHO-GMP aligned manufacturing facilities and quality controls supporting Aspen's nationwide footprint.",
     ctaLabel: "Manufacturing Network",
     ctaHref: "/manufacturing",
-    imageSrc:
-      "https://images.unsplash.com/photo-1581093458791-9d42c15f3f9a?auto=format&fit=crop&q=80&w=1600",
+    imageSrc: "/home-banner.jpg",
     imageAlt: "Modern pharmaceutical production environment",
   },
   {

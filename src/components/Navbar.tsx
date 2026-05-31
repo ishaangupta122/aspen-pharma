@@ -11,9 +11,14 @@ function Logo() {
       href="/"
       className="flex items-center gap-3"
       aria-label="Aspen Pharmaceuticals home">
-      <span className="grid size-10 place-items-center rounded-sm bg-[#0B3C6D] text-sm font-semibold tracking-[0.18em] text-white">
+      {/* <span className="grid size-10 place-items-center rounded-sm bg-[#0B3C6D] text-sm font-semibold tracking-[0.18em] text-white">
         AP
-      </span>
+      </span> */}
+      <img
+        src="/logo.png"
+        alt="Aspen Pharmaceuticals Logo"
+        className="h-10 w-auto"
+      />
       <span className="leading-tight">
         <span className="block text-[15px] font-semibold text-[#0B3C6D]">
           Aspen Pharmaceuticals
