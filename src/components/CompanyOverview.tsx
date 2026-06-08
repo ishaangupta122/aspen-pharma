@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 
 const overviewStats = [
   {
@@ -30,60 +31,8 @@ const overviewStats = [
 ];
 
 export function CompanyOverview() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const hasAnimatedRef = useRef(false);
-  const [animatedValues, setAnimatedValues] = useState<number[]>(
-    overviewStats.map(() => 0),
-  );
-
-  const statTargets = useMemo(() => {
-    return overviewStats.map((stat) => {
-      const match = stat.value.match(/(\d+)/);
-      const numeric = match ? Number(match[1]) : 0;
-      const suffix = stat.value.replace(String(numeric), "").trim();
-      return { numeric, suffix };
-    });
-  }, []);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimatedRef.current) {
-          hasAnimatedRef.current = true;
-          const duration = 1200;
-          const start = performance.now();
-
-          const step = (now: number) => {
-            const progress = Math.min((now - start) / duration, 1);
-            setAnimatedValues(
-              statTargets.map((target) =>
-                Math.round(target.numeric * progress),
-              ),
-            );
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            }
-          };
-
-          requestAnimationFrame(step);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.35 },
-    );
-
-    observer.observe(section);
-
-    return () => observer.disconnect();
-  }, [statTargets]);
-
   return (
-    <section id="overview" className="bg-white" ref={sectionRef}>
+    <section id="overview" className="bg-white">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-6">
@@ -107,30 +56,14 @@ export function CompanyOverview() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {overviewStats.map((stat, index) => (
-              <article
-                key={stat.label}
-                className="rounded-sm border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-3xl font-semibold text-[#0B3C6D]">
-                      {animatedValues[index]}
-                      {statTargets[index].suffix}
-                    </p>
-                    <p className="mt-3 text-sm font-semibold text-[#0B3C6D]">
-                      {stat.label}
-                    </p>
-                    <p className="mt-2 text-xs leading-5 text-slate-500">
-                      {stat.sublabel}
-                    </p>
-                  </div>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#0F8B8D]/40 bg-[#0F8B8D]/10 text-lg">
-                    {stat.icon}
-                  </div>
-                </div>
-              </article>
-            ))}
+          <div className="flex items-center justify-center">
+            <Image
+              src="/banner.png"
+              alt="Company overview visual"
+              width={700}
+              height={400}
+              className="rounded-sm border border-slate-200 object-cover"
+            />
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
-import CertificationsSection from "@/components/CertificationsSection";
 import { CompanyOverview } from "@/components/CompanyOverview";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { ImpactStrip } from "@/components/ImpactStrip";
 import ManufacturingSection from "@/components/MaufacturingSection";
+import EnvironmentSection from "@/components/EnvironmentSection";
+import PressReleasesSection from "@/components/PressReleasesSection";
 import { Navbar } from "@/components/Navbar";
 import ProductsSection from "@/components/ProductSections";
 import QualityCommitmentSection from "@/components/QualitySections";
@@ -17,6 +19,8 @@ export default function Home() {
         <HeroCarousel />
 
         <CompanyOverview />
+
+        <ImpactStrip />
 
         <ProductsSection />
 
@@ -73,7 +77,11 @@ export default function Home() {
           </div>
         </section>
 
-        <ManufacturingSection />
+        {/* <ManufacturingSection /> */}
+
+        <PressReleasesSection />
+
+        <EnvironmentSection />
 
         <QualityCommitmentSection />
 

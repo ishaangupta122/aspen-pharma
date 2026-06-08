@@ -46,12 +46,15 @@ export default function ProductsSection() {
   }, []);
 
   return (
-    <section id="products" className="bg-[#F5F7FA]">
+    <section id="products" className="bg-[#0B3C6D]">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
         <SectionHeader
           eyebrow="Featured Products"
           title="Product highlights by therapeutic division."
           description="A concise view of Aspen's product direction across specialist and primary care segments, with a downloadable portfolio overview."
+          eyebrowClass="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#92D6D7]"
+          titleClass="text-3xl font-medium tracking-tight text-white sm:text-4xl"
+          descriptionClass="mt-5 text-base leading-8 text-slate-200 sm:text-lg"
         />
 
         <div className="mt-8 flex items-center justify-end gap-3">
@@ -59,7 +62,7 @@ export default function ProductsSection() {
             type="button"
             onClick={() => handleScroll("left")}
             aria-label="Scroll left"
-            className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm border border-[#0B3C6D] bg-[#0B3C6D] text-white transition hover:bg-[#082f56]">
+            className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm border border-white/20 bg-white text-[#0B3C6D] transition hover:bg-[#f3f7fa]">
             <svg
               className="h-4 w-4"
               viewBox="0 0 24 24"
@@ -75,7 +78,7 @@ export default function ProductsSection() {
             type="button"
             onClick={() => handleScroll("right")}
             aria-label="Scroll right"
-            className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm border border-[#0B3C6D] bg-[#0B3C6D] text-white transition hover:bg-[#082f56]">
+            className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm border border-white/20 bg-white text-[#0B3C6D] transition hover:bg-[#f3f7fa]">
             <svg
               className="h-4 w-4"
               viewBox="0 0 24 24"
@@ -98,7 +101,7 @@ export default function ProductsSection() {
               key={division.slug}
               href={`/products?division=${division.slug}`}
               className="group flex h-full flex-none flex-col overflow-hidden rounded-sm border border-slate-200/60 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.04)] transition-all duration-300 ease-in-out hover:border-[#0F8B8D]/30 hover:shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:w-[70%] md:w-[calc(50%-12px)] lg:w-[calc(25%-15px)]">
-              <div className="relative h-50 w-full">
+              <div className="relative h-70 w-full">
                 <Image
                   src={divisionImages[division.slug]?.src ?? ""}
                   alt={divisionImages[division.slug]?.alt ?? division.title}
@@ -106,7 +109,7 @@ export default function ProductsSection() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-1 items-center justify-between gap-3 p-6">
+              <div className="flex flex-1 items-center justify-between gap-3 px-6 py-2">
                 <h3 className="text-lg font-semibold text-[#0B3C6D] transition-colors group-hover:text-[#0F8B8D]">
                   {division.title}
                 </h3>
@@ -131,13 +134,13 @@ export default function ProductsSection() {
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Link
             href="/products"
-            className="inline-flex justify-center rounded-sm bg-[#0B3C6D] px-6 py-4 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#082f56]">
+            className="inline-flex justify-center rounded-sm bg-white px-6 py-4 text-sm font-semibold text-[#0B3C6D] shadow-sm transition-colors duration-200 hover:bg-[#f3f7fa]">
             All Products
           </Link>
           <a
             href="/downloads/aspen-product-portfolio.pdf"
             download
-            className="inline-flex justify-center rounded-sm border border-slate-300 bg-white px-6 py-4 text-sm font-semibold text-[#0B3C6D] shadow-sm transition-colors duration-200 hover:border-[#0F8B8D] hover:text-[#0F8B8D]">
+            className="inline-flex justify-center rounded-sm border border-white/30 bg-transparent px-6 py-4 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:border-white/60 hover:text-white">
             Download Product PDF
           </a>
         </div>

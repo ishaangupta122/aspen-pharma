@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import HomeBanner from "@/components/HomeBanner";
@@ -23,7 +24,9 @@ export default function ProductsPage() {
 
         <section className="bg-white" id="product-tables">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
-            <ProductDivisionTabs />
+            <Suspense fallback={null}>
+              <ProductDivisionTabs />
+            </Suspense>
           </div>
         </section>
       </main>
